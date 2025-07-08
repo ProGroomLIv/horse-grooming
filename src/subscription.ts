@@ -1,4 +1,4 @@
-import {
+refrimport {
   OutputSchema as RepoEvent,
   isCommit,
 } from './lexicon/types/com/atproto/sync/subscribeRepos'
@@ -20,11 +20,11 @@ export class FirehoseSubscription extends FirehoseSubscriptionBase {
     const postsToDelete = ops.posts.deletes.map((del) => del.uri)
     const postsToCreate = ops.posts.creates
       .filter((create) => {
-        // only alf-related posts
-        return create.record.text.toLowerCase().includes('alf')
+        // only horse grooming posts with #horsegrooming hashtag
+        return create.record.text.toLowerCase().includes('#horsegrooming')
       })
       .map((create) => {
-        // map alf-related posts to a db row
+        // map #horsegrooming posts to a db row
         return {
           uri: create.uri,
           cid: create.cid,
