@@ -1,4 +1,4 @@
-import { RepoEvent, isCommit } from '@atproto/api'
+import RepoEvent from '@atproto/api'
 import { FirehoseSubscriptionBase, getOpsByType } from './util/subscription'
 
 export class FirehoseSubscription extends FirehoseSubscriptionBase {
