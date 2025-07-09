@@ -1,4 +1,5 @@
-import { isCommit, Commit } from '@atproto/api'
+import isCommit from '@atproto/api/dist/client/types/com/atproto/sync/subscribeRepos/util/isCommit'
+import { Commit } from '@atproto/api/dist/client/types/com/atproto/sync/subscribeRepos'
 import { FirehoseSubscriptionBase, getOpsByType } from './util/subscription'
 
 export class FirehoseSubscription extends FirehoseSubscriptionBase {
